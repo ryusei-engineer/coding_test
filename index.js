@@ -20,3 +20,11 @@ const array = [];
 // split()で文字列を切り出す
 array.push(lines[0].split(" "));
 console.log(array.join(","));
+
+// D問題
+const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
+//["177 645 96 546 114 66 33 957 770 674", ""]
+const array = lines[0].split(" ");
+for(let i = 0; i < array.length; i++){
+    process.stdout.write(array[i] + ",");
+}

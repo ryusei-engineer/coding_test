@@ -28,3 +28,9 @@ const array = lines[0].split(" ");
 for(let i = 0; i < array.length; i++){
     process.stdout.write(array[i] + ",");
 }
+
+// D問題
+const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
+//Math.maxで最大値を取得
+console.log(Math.max(...lines));
+

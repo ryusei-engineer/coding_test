@@ -34,3 +34,9 @@ const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
 //Math.maxで最大値を取得
 console.log(Math.max(...lines));
 
+// D問題
+const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
+for(let i = 1; i < lines[0]; i++){
+    process.stdout.write("paiza ");
+}
+process.stdout.write("paiza");

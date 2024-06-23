@@ -72,3 +72,33 @@ if(lines[1].includes(word)){
 }else{
     console.log("NO");
 }
+
+//D問題
+const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
+
+const int = lines[0].toString().split("");
+for( let i = 0; i < int.length; i++){
+    int[i] = Number(int[i]);
+}
+
+let a = int[0] + int[3];
+let b = int[1] + int[2];
+
+a = a.toString();
+b = b.toString();
+
+console.log(a + b);
+
+//D問題
+const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
+console.log(lines);
+let int = "00" + lines[0];
+let ans = int.substr(-3,3);
+console.log(ans);
+
+//D問題
+const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
+const time = lines[0].split(":");
+//Number()は17だと17に変換、07だと7に変換、00だと0に変換
+console.log(Number(time[0]));
+console.log(Number(time[1]));

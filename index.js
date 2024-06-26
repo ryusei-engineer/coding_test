@@ -99,6 +99,22 @@ console.log(ans);
 //D問題
 const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
 const time = lines[0].split(":");
-//Number()は17だと17に変換、07だと7に変換、00だと0に変換
+//Number()は1g7だと17に変換、07だと7に変換、00だと0に変換
 console.log(Number(time[0]));
 console.log(Number(time[1]));
+
+//D問題
+const lines = require("fs").readFileSync("/dev/stdin", "utf8").split("\n");
+const time = lines[0].split(":");
+time[0] = Number(time[0]);
+time[1] = Number(time[1]);
+time[1] += 30;
+if(time[1] > 60){
+    time[0]++;
+    time[1] -= 60;
+}
+time[0] = "00" + time[0];
+time[0] = time[0].slice(-2);
+
+console.log(time.join(":"));
+    

@@ -109,12 +109,16 @@ const time = lines[0].split(":");
 time[0] = Number(time[0]);
 time[1] = Number(time[1]);
 time[1] += 30;
-if(time[1] > 60){
+if(time[1] >= 60){
     time[0]++;
     time[1] -= 60;
 }
 time[0] = "00" + time[0];
 time[0] = time[0].slice(-2);
+time[1] = "00" + time[1];
+time[1] = time[1].slice(-2);
 
 console.log(time.join(":"));
+    
+
     
